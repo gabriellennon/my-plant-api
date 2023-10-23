@@ -1,0 +1,45 @@
+
+->FRONT
+[X] Integrar Listagem de plantas
+[X] Integrar criação de plantas do usuário
+[X] Integrar listagem das minhas plantas
+[X] Integrar Exclusão das minhas plantas
+[X] Prototipar e Codar UI de adicionar uma nova planta caso não tenha na listagem (ao cadastrar limpar o token de lsitagem de plantas do storage async)
+[X] Fazer Push Notifications
+[X] Implementar o refresh token
+[X] Login social com a Apple
+[X] Adicionar os .catch nas requests que estao sem
+[X] Resolver bug da listagem da home
+[X] Adicionar uma rolagem assim que ativar o teclado nos forms que tem
+[X] Instalar o google analytics 
+[] Prototipar e codar UI de chat com IA
+[] Prototipar campo de busca na listagem das plantas gerais e das minhas plantas
+
+->BACK
+[X] Tratar a questao se o usuário cadastrar uma mesma planta mais de 1x no mesmo ambiente
+[X] Login social com a Apple
+[X] Cadastrar algumas plantas no banco
+[] Deploy endpoint e banco
+[] Adicionar paginação na rota de plantas
+
+
+->EXEMPLO PAYLOD DE RESPOSTA DA AUTENTICACAO COM A APPLE
+
+{
+  "authorizationCode": "c3d18a66cca4e44ba9385e736d730980a.0.sryqt.JOsX6Q4kSeS--1rIXDRkVQ", 
+  "email": "gabriel.lennon@hotmail.com", 
+  "fullName": {"familyName": "Lennon", "givenName": "Gabriel", "middleName": null, "namePrefix": null, "nameSuffix": null, "nickname": null}, 
+  "identityToken": "eyJraWQiOiJXNldjT0tCIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJodHRwczovL2FwcGxlaWQuYXBwbGUuY29tIiwiYXVkIjoiaG9zdC5leHAuRXhwb25lbnQiLCJleHAiOjE2OTc1NjI4NjIsImlhdCI6MTY5NzQ3NjQ2Miwic3ViIjoiMDAxODAzLmRjZTk1ODQ0NjU5MjRmMGViN2RhODQ1MmM5YTE1NDRhLjAxNDkiLCJjX2hhc2giOiJfeXJ6STMxSTJxb2Mxb21EdWtLeWVnIiwiZW1haWwiOiJnYWJyaWVsLmxlbm5vbkBob3RtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoidHJ1ZSIsImF1dGhfdGltZSI6MTY5NzQ3NjQ2Miwibm9uY2Vfc3VwcG9ydGVkIjp0cnVlLCJyZWFsX3VzZXJfc3RhdHVzIjoyfQ.0czVSB1v2-krzeaNVs724OVJagVTC5G8gZLueKVq7nFr1Jy6kmyV4NBQyQ40MljPg5iTMNI9aqJIQNe3x2wP4COny8NGBVRtlZcc0tKQdsmVd9dkjW_7akTYcsFrl8kg-H-YaseO44z7WRuJrc4r6CyX22wqsdCZXKy8W5z5ubsqVksCsvqxsRY8uifzQ2xnyvXFmBUXax_dnptof_YK-SdMc6sa86y2FhefO6bBddGebo4RdFjihOayr7jAJutO3sg5cN5wCbIrJL0XZA7VqULraD3e56Z4x5HwG2rIms3W-A8HJcIsxPJi47R9QlNMCjwuP_nqxize7NjZ7LbaSA", 
+  "realUserStatus": 2, 
+  "state": null, 
+  "user": "001803.dce9584465924f0eb7da8452c9a1544a.0149"
+}
+
+{
+  "authorizationCode": "c07dc65eb746b43d487e2811f94464b78.0.sryqt.oFSNv3pYOiHVcevXzgoamw", 
+  "email": null, "fullName": {"familyName": null, "givenName": null, "middleName": null, "namePrefix": null, "nameSuffix": null, "nickname": null}, 
+  "identityToken": "eyJraWQiOiJXNldjT0tCIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJodHRwczovL2FwcGxlaWQuYXBwbGUuY29tIiwiYXVkIjoiaG9zdC5leHAuRXhwb25lbnQiLCJleHAiOjE2OTc1NjI2NzgsImlhdCI6MTY5NzQ3NjI3OCwic3ViIjoiMDAxODAzLmRjZTk1ODQ0NjU5MjRmMGViN2RhODQ1MmM5YTE1NDRhLjAxNDkiLCJjX2hhc2giOiJ4ZC1UR254TTNuZnZfeWl3a1gzUW5BIiwiZW1haWwiOiJnYWJyaWVsLmxlbm5vbkBob3RtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoidHJ1ZSIsImF1dGhfdGltZSI6MTY5NzQ3NjI3OCwibm9uY2Vfc3VwcG9ydGVkIjp0cnVlfQ.Iu-qw1DUymS80fMF7fgfOJ0tUZbFcsesTNzbJkRYmj2Z-ki64J0ddXMP6WihEM-aDU2HcGbNLJWN-_fN-I3Apm8zKnlioD6ogeJdO65_7XulI3Lov0ZyRoNvQf_2rlCaKeCBYg67oIxNtOvsnJ8WC4m8ddbfRvtXaqEg0sCT0Udm_ALqE7lcwSLmEJUGmRD4DyVwr6D7uWpsA3mfDSDZ0tffA8cxv2PuthlWW5aI4Tr8vnbakLfG8nh62CX1qJsZSq4QZw4_j6aGYRbv2aTbQd3u18XNCbFHJnB2JYSavSai_IeKsKLM-quc2rA4QRW9SuSRoT6QzLnJy4UrIHIbNw", 
+  "realUserStatus": 1, 
+  "state": null,
+   "user": "001803.dce9584465924f0eb7da8452c9a1544a.0149"
+  }
