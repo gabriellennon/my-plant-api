@@ -1,0 +1,63 @@
+# @name get-plants
+GET http://localhost:3333/plants
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiR2FicmllbCBMZW5ub24iLCJhdmF0YXJVcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMQldrdHZQT1VtOWlnVEtKODNVM056aGI3UDRnVVE2R3BOQy0tQ1IxUGlQVDQ9czk2LWMiLCJzdWIiOiI3ZTYzZGIxOS02ZDdmLTQ5N2EtOTk3OC05NDViYmUzYTk2NTQiLCJpYXQiOjE2OTY0NTIwODMsImV4cCI6MTY5OTA0NDA4M30.V3NvcQLTzIEhyq3p955b6a8agSif9TxtM7yoeCabDV0
+###
+
+# @name get-plants-user
+GET http://localhost:3333/plantsuser
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiR2FicmllbCBMZW5ub24iLCJhdmF0YXJVcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMQldrdHZQT1VtOWlnVEtKODNVM056aGI3UDRnVVE2R3BOQy0tQ1IxUGlQVDQ9czk2LWMiLCJzdWIiOiI3ZTYzZGIxOS02ZDdmLTQ5N2EtOTk3OC05NDViYmUzYTk2NTQiLCJpYXQiOjE2OTY0NTIwODMsImV4cCI6MTY5OTA0NDA4M30.V3NvcQLTzIEhyq3p955b6a8agSif9TxtM7yoeCabDV0
+###
+
+###
+
+# @name delete-plant-user
+DELETE  http://localhost:3333/plantsuser/383b8a82-6799-44ba-88ba-969ebffe8142
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiR2FicmllbCBMZW5ub24iLCJhdmF0YXJVcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMQldrdHZQT1VtOWlnVEtKODNVM056aGI3UDRnVVE2R3BOQy0tQ1IxUGlQVDQ9czk2LWMiLCJzdWIiOiI3ZTYzZGIxOS02ZDdmLTQ5N2EtOTk3OC05NDViYmUzYTk2NTQiLCJpYXQiOjE2OTY0NTIwODMsImV4cCI6MTY5OTA0NDA4M30.V3NvcQLTzIEhyq3p955b6a8agSif9TxtM7yoeCabDV0
+###
+
+# @name register_plant
+POST http://localhost:3333/plants
+Content-Type: application/json
+
+# 'daily' | 'week' | 'monthly'
+{
+    "name": "Violeta",
+    "about": "Com flores delicadas. Elas são ótimas sugestões para decorar o banheiro. Gostam de um ambiente com um certo grau de umidade.",
+    "water_tips": "Nada de molhar as flores e folhas. Regue o solo 1 vez na semana.",
+    "water_amount": 50,
+    "photo": "https://i.ibb.co/R6KqKYL/violeta.png",
+    "frequency_time": 1,
+    "frequency_repeat_everyday": "week"
+}
+
+###
+
+# @name register_user
+POST http://localhost:3333/register
+Content-Type: application/json
+
+{
+    "access_token": "ya29.a0AfB_byAaK7i9rEIlfqjrFOPU1qHSpwMaKNuV1MDWI2M8Wu2maF0c-t3H0hM6j3-BE-41u6tBXvm6ij5B70H0g7odFkDbS-r3Hl-5gnqAVKIBkcZpHw50GoDMRJ3Ux-ra9gUonHOxR0LVMUNFdO4nH3dKsnLKI9Y_7wWxaCgYKATESARISFQGOcNnCJFgJuNiYvr_Dha5njqMJVQ0171"
+}
+
+###
+
+# @name register_plant_user
+POST http://localhost:3333/plantUser
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiR2FicmllbCBMZW5ub24iLCJhdmF0YXJVcmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMQldrdHZQT1VtOWlnVEtKODNVM056aGI3UDRnVVE2R3BOQy0tQ1IxUGlQVDQ9czk2LWMiLCJzdWIiOiI3ZTYzZGIxOS02ZDdmLTQ5N2EtOTk3OC05NDViYmUzYTk2NTQiLCJpYXQiOjE2OTY1Mzk3NTUsImV4cCI6MTY5NjcxMjU1NX0.R9ak23J2N_vVCDgwKhNw4OXUZuULlUgp0ZSQ1ea3jLM
+Content-Type: application/json
+
+{
+    "id": "383b8a82-6799-44ba-88ba-969ebffe8142",
+    "name": "Suculenta",
+    "custom_name ": "manu",
+    "about": "Não pode pegar sol diretamente, gosta de janelas bem iluminadas, e deve ficar em temperatura ambiente, dentro de casa ou na varanda. ",
+    "water_tips": "A rega deve ser feita com 20ml a 50ml de água a cada 1 semana",
+    "water_amount": 30,
+    "photo": "https://i.ibb.co/3Tz2pFq/suculenta.png",
+    "environment_plant": "Quarto",
+    "frequency_time": 1,
+    "frequency_repeat": "week",
+    "reminder_time": "14:30"
+}
+

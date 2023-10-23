@@ -1,0 +1,66 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Plant {
+  id                        String @id @default(uuid())
+  name                      String
+  about                     String
+  water_tips                String
+  water_amount              Int
+  photo                     String
+  frequency_time            Int
+  frequency_repeat_everyday String
+
+  // dateTimeNotification DateTime? @default(now())
+  // hour                 String?
+}
+
+model User {
+  id                 String  @id @default(uuid())
+  googleId           String? @unique
+  appleIdentityToken String? @unique
+  appleUserId        String? @unique
+  avatarUrl          String
+  email              String  @unique
+  name               String
+
+  // Relacionamento com as plantas do usuário
+  plants Plant_User[]
+}
+
+model Plant_User {
+  id                String @id @default(uuid())
+  userId            String
+  name              String
+  custom_name       String
+  about             String
+  water_tips        String
+  water_amount      Int
+  photo             String
+  environment_plant String
+  //Número de vezes: exemplo 2x por dia/semana/mes/ano/diario
+  frequency_time    Int
+
+  // 'daily' | 'weekly' | 'monthly'
+  frequency_repeat      String
+  // Horário no formato "HH:MM"
+  reminder_time         String
+  // reminder_time    DateTime @default(now())
+  reminder_time_in_date String
+
+  // Data da última rega (opcional)
+  lastWatered DateTime @default(now())
+
+  // Relacionamento com o usuário proprietário
+
+  user User @relation(fields: [userId], references: [id])
+}
