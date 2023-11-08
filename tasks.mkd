@@ -1,25 +1,11 @@
 
 ->FRONT
-[X] Integrar Listagem de plantas
-[X] Integrar criação de plantas do usuário
-[X] Integrar listagem das minhas plantas
-[X] Integrar Exclusão das minhas plantas
-[X] Prototipar e Codar UI de adicionar uma nova planta caso não tenha na listagem (ao cadastrar limpar o token de lsitagem de plantas do storage async)
-[X] Fazer Push Notifications
-[X] Implementar o refresh token
-[X] Login social com a Apple
-[X] Adicionar os .catch nas requests que estao sem
-[X] Resolver bug da listagem da home
-[X] Adicionar uma rolagem assim que ativar o teclado nos forms que tem
-[X] Instalar o google analytics 
+[] Fazer tela de perfil do usuário
 [] Prototipar e codar UI de chat com IA
 [] Prototipar campo de busca na listagem das plantas gerais e das minhas plantas
 
 ->BACK
-[X] Tratar a questao se o usuário cadastrar uma mesma planta mais de 1x no mesmo ambiente
-[X] Login social com a Apple
-[X] Cadastrar algumas plantas no banco
-[] Deploy endpoint e banco
+[] Adicionar endpoint de exclusao do usuário
 [] Adicionar paginação na rota de plantas
 
 

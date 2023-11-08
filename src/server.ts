@@ -5,6 +5,7 @@ import jwt from '@fastify/jwt'
 import { fastifyCors } from '@fastify/cors';
 import { plantsRoute } from './routes/plants';
 import { authRoutes } from './routes/auth';
+import { userRoute } from './routes/user';
 
 const app = fastify()
 
@@ -20,6 +21,7 @@ app.register(jwt, {
 
 app.register(authRoutes)
 app.register(plantsRoute)
+app.register(userRoute)
 
 
 app.listen({
